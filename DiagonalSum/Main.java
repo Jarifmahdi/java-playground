@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter matrix size(n): ");
         int n = Integer.parseInt(sc.nextLine().trim());
         int[][] matrix = new int[n][n];
+
+        System.out.println("Enter the matrix:");
         for (int i = 0; i < n; i++) {
             String[] parts = sc.nextLine().trim().split(" ");
             for (int j = 0; j < n; j++)
@@ -30,7 +33,9 @@ public class Main {
                 }
             }
         }
+
         if (n > 0) {
+            System.out.print("Diagonal sum is: ");
             if (n % 2 == 0) {
                 System.out.println(sum1 + sum2);
             } else {
